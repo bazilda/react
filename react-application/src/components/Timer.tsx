@@ -16,50 +16,20 @@ export const Timer: React.FC<Props> = ({ cityCountry }) => {
         }
     }, []);
 
-
-    //useEffect(() => {let timeZone =  (); }, [cityCountry]);
-
-    function tic() {
+   function tic() {
         setTime(new Date());
     }
 
     return <>
         <h2 >Current Time in {cityCountry}</h2>
-        <p>{time.toLocaleTimeString(undefined, { timeZone: findTimeZone(cityCountry).name })}</p>
+        <p>{time.toLocaleTimeString(undefined, { timeZone: findTimeZoneName(cityCountry) })}</p>
     </>
-
-    // return <>
-    //     <h2 style={cityNameStyle}>Current Time in{cityCountry}</h2>
-    //     <p >{time.toLocaleTimeString(undefined, { timeZone: findTimeZone(cityCountry) })}</p>
-    // </>
 }
 
-function findTimeZone(cityName: string) {
-    for (let timeZone of timeZones) {
 
-        if (timeZone.countryName == cityName)
-            return timeZone;
-
-        for (const city of timeZone.mainCities) {
-            if (city == cityName)
-                return timeZone;
-        }
-    }
-
-    return {
-        "name": "Asia/Jerusalem",
-        "alternativeName": "Israel Time",
-        "group": ["Asia/Jerusalem"],
-        "continentCode": "AS",
-        "continentName": "Asia",
-        "countryName": "Israel",
-        "countryCode": "IL",
-        "mainCities": ["Jerusalem", "Tel Aviv"],
-        "rawOffsetInMinutes": 120,
-        "rawFormat": "+02:00 Israel Time - Jerusalem, Tel Aviv"
-    };
+function findTimeZoneName (cityName: string): string | undefined{
+    const ind = timeZones.findIndex(tz=>JSON.stringify(tz).includes(cityName));
+    if (ind < 0)
+        return "Asia/Jerusalem";
+    return timeZones[ind].name;
 }
-// function findTimeZone (): string | undefined{
-//     const ind=timeZones.findIndex(tz=>JSON.stringify(tz).includes(cityCountru);
-//     return ......
-// }
