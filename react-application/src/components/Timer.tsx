@@ -5,7 +5,7 @@ type Props = {
     cityCountry: string;
 }
 export const Timer: React.FC<Props> = ({ cityCountry }) => {
-    const styles: React.CSSProperties = { backgroundColor: "lightblue", fontSize: "2em" };
+  //  const styles: React.CSSProperties = { backgroundColor: "lightblue", fontSize: "2em" };
 
     const [time, setTime] = React.useState(new Date());
 
