@@ -16,9 +16,6 @@ export const Timer: React.FC<Props> = ({ cityCountry }) => {
         }
     }, []);
 
-
-    //useEffect(() => {let timeZone =  (); }, [cityCountry]);
-
     function tic() {
         setTime(new Date());
     }
@@ -27,11 +24,6 @@ export const Timer: React.FC<Props> = ({ cityCountry }) => {
         <h2 >Current Time in {cityCountry}</h2>
         <p>{time.toLocaleTimeString(undefined, { timeZone: findTimeZone(cityCountry).name })}</p>
     </>
-
-    // return <>
-    //     <h2 style={cityNameStyle}>Current Time in{cityCountry}</h2>
-    //     <p >{time.toLocaleTimeString(undefined, { timeZone: findTimeZone(cityCountry) })}</p>
-    // </>
 }
 
 function findTimeZone(cityName: string) {
