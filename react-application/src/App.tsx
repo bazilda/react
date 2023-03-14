@@ -9,8 +9,8 @@ function App() {
    justifyContent: "space-around", background:"blue",color:"white"};
   return <div style={column}>
     <div style={row}>
-    <InputTest/>
-       <Timer cityCountry='Israel'/>
+    <InputTest>
+       <Timer cityCountry='Israel'/></InputTest>
     <Timer cityCountry='Sydney'/>
     </div>
    <div style={row}>
