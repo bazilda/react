@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Input } from "./Input";
+import { Timer } from "./Timer";
 export const InputTest:React.FC = () =>
 {
     const [inputValue, setInputValue] = useState<string>('')
@@ -14,7 +15,7 @@ export const InputTest:React.FC = () =>
         return res;
     }
     return <div>
-        <Input submitFn={submit} placeHolder={"enter any text"} buttonName="enter"/>
-        <p>{inputValue}</p>
+        <Input submitFn={submit} placeHolder={"enter new city/country "} buttonName="enter"/>
+        {/* <p>{cityCountry=inputValue}</p> */}
     </div>
 }
