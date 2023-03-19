@@ -7,7 +7,7 @@ export const InputTest:React.FC = () =>
     function submit(value: string): string {
         let res = '';
         if(value.toLowerCase().includes("hello")) {
-            res = "get tired of 'HELLO'";
+            res = " the city is undefined, this is why you have Israels time ";
         } else {
             setInputValue(value);
         }
@@ -16,6 +16,6 @@ export const InputTest:React.FC = () =>
     }
     return <div>
         <Input submitFn={submit} placeHolder={"enter new city/country "} buttonName="enter"/>
-        {/* <p>{cityCountry=inputValue}</p> */}
+        {/* <p>{cityCountry  cityName=inputValue}</p>   */}
     </div>
 }
