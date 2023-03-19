@@ -1,26 +1,18 @@
 import React from 'react';
-// import { InputTest } from './components/InputTest';
 import './App.css';
+import { CounterMultiply } from './components/CounterMultiply';
+import { CounterSquare } from './components/CounterSquare';
+import { CounterUpdater } from './components/CounterUpdater';
 import { Timer } from './components/Timer';
+
 function App() {
-  const column: React.CSSProperties = {
-    display: "flex", flexDirection: "column",
-    height: "90vh", justifyContent: "center", background: "blue"
-  };
-  const row: React.CSSProperties = {
-    display: "flex", flexDirection: "row",
-    justifyContent: "space-around", background: "blue", color: "white"
-  };
-  return <div style={column}>
-    <div style={row}>
-      <Timer cityCountry='Israel' />
-      <Timer cityCountry='Sydney' />
+
+  return <div style={{display: 'flex', alignItems: 'center',
+   flexDirection: 'column'}}>
+    <CounterUpdater operand={10}/>
+    <CounterMultiply factor={2}/>
+    <CounterSquare/>
     </div>
-    <div style={row}>
-      <Timer cityCountry='Mexico' />
-      <Timer cityCountry='Chicago' />
-    </div>
-  </div>
 }
 
 export default App;
