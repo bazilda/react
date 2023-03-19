@@ -37,7 +37,7 @@ export const Timer: React.FC<Props> = ({ cityCountry }) => {
         const tmpZone = findTimeZoneName(inputValue);
         let res: string = '';
         if (!tmpZone) {
-            res = `${inputValue} doesn't exist in the TZ this is whiy you had the Israels TZ`;
+            res = `${inputValue} doesn't exist in the TZ this is why you had the Israels TZ`;
         } else {
             timeZone.current = tmpZone;
             setCityCountry(inputValue);

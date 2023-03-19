@@ -13,15 +13,15 @@ function App() {
   };
   return <div style={column}>
     <div style={row}>
-      <InputTest />
+     
       <Timer cityCountry='Israel' />
-      <InputTest />
+     
       <Timer cityCountry='Sydney' />
     </div>
     <div style={row}>
-      <InputTest />
+    
       <Timer cityCountry='Mexico' />
-      <InputTest />
+    
       <Timer cityCountry='Chicago' />
     </div>
   </div>
