@@ -18,7 +18,6 @@ export const Input: React.FC<Props> = ({findeNewTZ, placeHolder, buttonName}) =>
        if(!tmpMsg){
         inputElement.current!.value='';
        }
-    //    else message=tmpMsg;
     }
     return <div>
         <input type="text" placeholder={placeHolder} id={id.current}/>

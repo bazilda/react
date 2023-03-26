@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { InputTest } from './components/InputTest';
 import { Timer } from './components/Timer';
 import './App.css';
@@ -15,18 +14,13 @@ function App() {
   };
   return <div style={column}>
     <div style={row}>
-     
       <Timer cityCountry='Israel' />
-     
       <Timer cityCountry='Sydney' />
     </div>
     <div style={row}>
-    
       <Timer cityCountry='Mexico' />
-    
       <Timer cityCountry='Chicago' />
     </div>
   </div>
 }
-
 export default App;

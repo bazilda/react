@@ -5,7 +5,6 @@ import { Input } from "./Input";
 type Props = {
     cityCountry: string;
 }
-
 export const Timer: React.FC<Props> = ({ cityCountry }) => {
     const styles: React.CSSProperties = { backgroundColor: "black", color: "white", fontSize: "2em" };
 
@@ -39,17 +38,17 @@ export const Timer: React.FC<Props> = ({ cityCountry }) => {
         let res: string = '';
         if (tmpZone == undefined) {
             res = `${inputValue} doesn't exist in the TZ this is why you had the Israels TZ`;
-            inputValue="Israel now";
+            inputValue = "Israel now";
         }
-        
+
         timeZone.current = tmpZone;
         setCityCountry(inputValue);
-        
+
         return res;
     }
 
     return <div>
-        <Input findeNewTZ={findeNewTZ}  placeHolder={"Enter any City/Country"} />
+        <Input findeNewTZ={findeNewTZ} placeHolder={"Enter any City/Country"} />
         <h2 >Current Time in {inputCityCountry}</h2>
         <p style={styles}>{time.toLocaleTimeString(undefined, { timeZone: timeZone.current })}</p>
     </div>
