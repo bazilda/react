@@ -1,11 +1,11 @@
 import React, {useEffect, useRef, useState} from "react";
 import { Alert } from "./Alert";
 type Props = {
-    submitFn: (value: string)=>string;
+    findeNewTZ: (value: string)=>string;
     placeHolder: string;
     buttonName?: string;
 }
-export const Input: React.FC<Props> = ({submitFn, placeHolder, buttonName}) => {
+export const Input: React.FC<Props> = ({findeNewTZ, placeHolder, buttonName}) => {
     const id = useRef<string>(Math.random().toString());
     const inputElement = useRef<HTMLInputElement | null>();
     const [message, setMessage] = useState<string>('')
@@ -13,11 +13,12 @@ export const Input: React.FC<Props> = ({submitFn, placeHolder, buttonName}) => {
         inputElement.current = document.getElementById(id.current) as HTMLInputElement
     }, []);
     function inputProcess() {
-        const tmpMsg=submitFn(inputElement.current!.value);
-       setMessage(submitFn(inputElement.current!.value));
+       const tmpMsg=findeNewTZ(inputElement.current!.value);
+       setMessage(findeNewTZ(inputElement.current!.value));
        if(!tmpMsg){
         inputElement.current!.value='';
        }
+    //    else message=tmpMsg;
     }
     return <div>
         <input type="text" placeholder={placeHolder} id={id.current}/>

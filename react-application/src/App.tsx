@@ -1,11 +1,13 @@
 import React from 'react';
+
 import { InputTest } from './components/InputTest';
-import './App.css';
 import { Timer } from './components/Timer';
+import './App.css';
+
 function App() {
   const column: React.CSSProperties = {
     display: "flex", flexDirection: "column",
-    height: "90vh", justifyContent: "center", background: "blue"
+    height: "90vh", justifyContent: "center", background: "green"
   };
   const row: React.CSSProperties = {
     display: "flex", flexDirection: "row",

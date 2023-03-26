@@ -15,7 +15,7 @@ export const InputTest:React.FC = () =>
         return res;
     }
     return <div>
-        <Input submitFn={submit} placeHolder={"enter new city/country "} buttonName="enter"/>
+        <Input findeNewTZ={submit} placeHolder={"enter new city/country "} buttonName="enter"/>
         {/* <p>{cityCountry  cityName=inputValue}</p>   */}
     </div>
 }
