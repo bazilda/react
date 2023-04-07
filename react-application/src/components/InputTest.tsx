@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Input } from "./Input";
-import { Timer } from "./Timer";
+//import { Timer } from "./Timer";
 export const InputTest:React.FC = () =>
 {
     const [inputValue, setInputValue] = useState<string>('')
