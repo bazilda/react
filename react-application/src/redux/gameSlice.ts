@@ -2,9 +2,11 @@ import { createSlice } from "@reduxjs/toolkit";
 import { game } from "../config/game-service-config";
 import { CellType } from "../model/CellType";
 import GameRow from "../service/GameRow";
+
 const initialState: {cells: CellType[] | string} = {
     cells: game.getInitialRow()
 }
+
 const gameSlice = createSlice({
    initialState,
    reducers: {
