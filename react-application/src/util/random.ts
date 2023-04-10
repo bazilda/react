@@ -5,10 +5,12 @@ export function getRandomElement(array: any[]): any {
     return array[getRandomNumber(0, array.length)];
 }
 export function getRandomMatrix(rows: number, columns: number, minNumber: number,
-     maxNumber: number):  number[][] {
-        function getRow(): number[] {
-            return Array({length: columns}).map(() =>
-             getRandomNumber(minNumber, maxNumber + 1))
-        }
-        return Array({length: rows}).map(() => getRow());
-     }
+    maxNumber: number):  number[][] {
+       function getRow(): number[] {
+           return Array.from({length: columns},
+                () => getRandomNumber(minNumber, maxNumber + 1))
+       }
+       const res: number[][] = Array.from({length: rows}, ()=>getRow());
+      
+       return res;
+    }
