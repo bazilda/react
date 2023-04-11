@@ -1,6 +1,5 @@
 import React, { ReactNode } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-
+import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom';
 import './App.css';
 import { Bread } from './components/pages/Bread';
 import { Customers } from './components/pages/Customers';
@@ -11,8 +10,6 @@ import { Orders } from './components/pages/Orders';
 import { Products } from './components/navigators/Products';
 import { ShoppingCart } from './components/pages/ShoppingCart';
 import { Layout } from './components/navigators/Layout';
-
-
 
 function App() {
 
@@ -29,10 +26,6 @@ function App() {
 
                     </Route>
                </Route>
-
-
-
-
 
                <Route path='/*' element={<NotFound />} />
 
