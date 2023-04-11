@@ -50,6 +50,11 @@ export default class LifeMatrix {
     sums(i:number, j:number) : number{
         let rows = this._numbers.length;
         let cols = this._numbers[0].length;
+
+        if (i >= rows || j >= cols) {
+            throw new Error("Invalid cell index");
+        }
+
         let sum  : number = 0;
         for (let m=i-1; m<=i+1; m++ ){
             for(let n=j-1; n<=j+1; n++){
