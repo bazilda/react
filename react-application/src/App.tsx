@@ -9,7 +9,6 @@ import { NotFound } from './components/pages/NotFound';
 import { Orders } from './components/pages/Orders';
 import { Navigator } from './components/navigators/Navigator';
 import { ShoppingCart } from './components/pages/ShoppingCart';
-import { NavLink, Outlet } from "react-router-dom"
 import GoHome from './components/navigators/GoHome';
 
 export const App: React.FC = () => {
